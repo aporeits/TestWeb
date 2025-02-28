@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laika plānošanas lietotnes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #4CAF50;
+            color: white;
+            margin-bottom: 0;
+        }
+
+        .navbar a {
+            color: white !important;
+            text-transform: uppercase;
+        }
+
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+
+        .section-header {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 30px;
+        }
+
+        .section-content {
+            padding: 40px 20px;
+        }
+
+        .app-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .app-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .app-card .app-details {
+            padding: 15px;
+        }
+
+        .app-card .app-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .app-card .app-description {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Laika plānošanas lietotnes</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#overview">Pārskats</a></li>
+                <li><a href="#top-apps">Top lietotnes</a></li>
+                <li><a href="#benefits">Priekšrocības</a></li>
+                <li><a href="#tips">Padomi</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section-content">
+        <h2 class="section-header">Kas ir laika plānošanas lietotnes?</h2>
+        <p>Laika plānošanas lietotnes ir rīki, kas palīdz lietotājiem organizēt savu ikdienu, uzdevumus un termiņus. Šīs lietotnes var palīdzēt efektīvi plānot dienas grafiku, uzlabot produktivitāti un samazināt stresu. Tās ļauj viegli pārvaldīt uzdevumus, atgādinājumus un piezīmes dažādos ierīcēs, kā arī sinhronizēt darbu starp dažādiem kontiem.</p>
+    </section>
+
+    <!-- Top Apps Section -->
+    <section id="top-apps" class="section-content">
+        <h2 class="section-header">Populārākās laika plānošanas lietotnes</h2>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="app-card">
+                        <img src="images/trello.png" alt="Trello">
+                        <div class="app-details">
+                            <h3 class="app-title">Trello</h3>
+                            <p class="app-description">Trello ir vizuāla laika plānošanas lietotne, kas ļauj organizēt uzdevumus, projektus un komandas darbu ar dažādām kartēm un sarakstiem.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="app-card">
+                        <img src="images/googlecalendar.png" alt="Google Calendar">
+                        <div class="app-details">
+                            <h3 class="app-title">Google Calendar</h3>
+                            <p class="app-description">Google Calendar ir populāra lietotne, kas ļauj viegli plānot un sekot līdzi svarīgiem notikumiem un sapulcēm. Tā piedāvā iespēju dalīties kalendāros un saņemt atgādinājumus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="app-card">
+                        <img src="images/anydo.png" alt="Any.do">
+                        <div class="app-details">
+                            <h3 class="app-title">Any.do</h3>
+                            <p class="app-description">Any.do piedāvā uzdevumu pārvaldību, kalendāru un atgādinājumus vienā lietotnē, kas palīdz saglabāt kārtību un fokusēties uz svarīgākajiem uzdevumiem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section-content">
+        <h2 class="section-header">Laika plānošanas lietotņu priekšrocības</h2>
+        <ul>
+            <li>Uzdevumu pārvaldība: Izveidojiet sarakstus un sadaliet uzdevumus pēc prioritātēm.</li>
+            <li>Atgādinājumi: Lietotnes automātiski atgādinās par svarīgiem datumiem un termiņiem.</li>
+            <li>Produktivitāte: Palīdz saglabāt koncentrēšanos un sekot līdzi ikdienas uzdevumiem.</li>
+            <li>Viegla piekļuve: Daudzas lietotnes piedāvā mobilās un tīmekļa versijas, kas ļauj piekļūt plāniem jebkurā laikā un vietā.</li>
+        </ul>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="section-content">
+        <h2 class="section-header">Padomi laika plānošanai</h2>
+        <ul>
+            <li>Plānojiet dienu iepriekš, lai sāktu dienu ar skaidru mērķi.</li>
+            <li>Izmantojiet laika ierobežojumus uz uzdevumiem, lai palielinātu produktivitāti.</li>
+            <li>Regulāri pārskatiet savu plānu, lai pielāgotu to mainīgajām vajadzībām.</li>
+            <li>Izmantojiet atgādinājumus, lai neaizmirstu svarīgas tikšanās vai uzdevumus.</li>
+        </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Man ir jāpārvalda pulkstenis, nevis mani tas pārvalda. -Golda Meira-</p>
+    </footer>
+
+</body>
+</html>
