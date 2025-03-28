@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informācijas daudzuma mērvienības</title>
+    <style>
+        body {
+            background-image: url("images/cipari.jpg");
+        }
+        form {
+            font-size: 20px;
+            background-color: rgb(220, 220, 0);
+        }
+    </style>
+    <script>
+        // Function to convert GB to MB and MiB
+        function Mb() {
+            let GB = document.getElementsByName('GB')[0].value;
+            let MB = GB * 1024;
+
+            document.getElementsByName('MB')[0].value = MB;
+        }
+        
+        function Mib() {
+            let GB = document.getElementsByName('GB')[0].value;
+            
+            let MiB = GB * 1024 * 1.024;
+
+            document.getElementsByName('MiB')[0].value = MiB;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Informācijas daudzuma mērvienības</h1>
+
+    <form>
+        <input type="text" name="GB"> GB <br><br>
+        
+        <input type="button" value="Izteikt megabaitos" onclick="Mb();">
+        <input type="text" name="MB" readonly> MB<br><br>
+        
+  
+        <input type="button" value="Izteikt mibibaitos" onclick="Mib();">
+        <input type="text" name="MiB" readonly> MiB<br><br>
+    </form>
+
+</body>
+</html>

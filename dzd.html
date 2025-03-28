@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="lv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gaidot dzimšanas dienu</title>
+        
+    </head>
+    <body>
+        <script>
+            function Dienas(){
+                // Correcting the method of getting the value of inputs
+                let gads = document.getElementsByName('gads')[0].value;
+                let menesis = document.getElementsByName('menesis')[0].value;
+                let diena = document.getElementsByName('diena')[0].value;
+
+                // Ensure the date is valid
+                if (!gads || !menesis || !diena) {
+                    alert("Lūdzu ievadi visus datus!");
+                    return;
+                }
+
+                // Convert inputs to integers
+                gads = parseInt(gads);
+                menesis = parseInt(menesis) - 1; // Month is zero-indexed in JavaScript
+                diena = parseInt(diena);
+
+                // Create a date object for the next birthday
+                let birthday = new Date(gads, menesis, diena);
+                let today = new Date();
+
+                // If the birthday has already passed this year, move it to the next year
+                if (birthday < today) {
+                    birthday.setFullYear(today.getFullYear() + 1);
+                }
+
+                // Calculate the number of days until the next birthday
+                let timeDiff = birthday - today;
+                let daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+                // Display the result
+                document.getElementsByName('dienas')[0].value = daysLeft;
+            }
+        </script>
+        <h1>Gaidot dzimšanas dienu</h1>
+        <hr>
+        <form>
+            Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena<br>
+            gads <input type="text" name="gads"> <br>
+            mēnesis <input type="text" name="menesis"> <br>
+            diena <input type="text" name="diena"> <br>
+            <input type="button" value="Aprēķināt dienu skaitu līdz dzimšanas dienai" onclick="Dienas();"><br>
+            Līdz svētkiem atlikušas <input type="text" name="dienas" readonly> dienas :)
+        </form>
+    </body>
+</html>
